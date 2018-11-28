@@ -1,0 +1,74 @@
+@keyframes pacman-balls {
+    75% {
+        opacity: .7;
+    }    
+    100% {
+        -webkit-transform: translate(-100px,-6.25px);
+        transform: translate(-100px,-6.25px);
+    }
+}
+
+/* The element to apply the animation to */
+.pacman {
+    position: relative;
+}
+
+.loader {
+    box-sizing: border-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    height: 200px;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.pacman>div:nth-child(3), .pacman>div:nth-child(4), .pacman>div:nth-child(5), .pacman>div:nth-child(6) {
+    background-color:red;
+    border-radius: 100%;
+    margin: 2px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    -webkit-transform: translate(0,-6.25px);
+    transform: translate(0,-6.25px);
+    top: 25px;
+    left: 70px;
+}
+
+.pacman>div:nth-child(3) {
+    -webkit-animation: pacman-balls 1s -.66s infinite linear;
+    animation: pacman-balls 1s -.66s infinite linear;
+}
+* {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+html,body{
+background: #ed5565;
+    color: #fff;
+}
+html, body {
+    font-family: "proxima-nova", sans-serif;
+    color: #202020;
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
